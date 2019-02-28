@@ -1,0 +1,1 @@
+This function triggers a pipeline on Spinnaker determined by the provided parameters.
