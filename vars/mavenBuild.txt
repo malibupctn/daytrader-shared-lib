@@ -1,0 +1,1 @@
+This expects a container defined as 'maven' and changes to the specified directory before running maven package.
