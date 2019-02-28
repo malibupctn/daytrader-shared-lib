@@ -1,5 +1,5 @@
-def call(directory,app, destination, imageName, imageTag, version, port, params = '') {
-  container(name: 'kaniko', shell: '/busybox/sh') {
+def call(containerName, directory, app, destination, imageName, imageTag, version, port, params = '') {
+  container(name: containerName, shell: '/busybox/sh') {
     withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
       sh """#!/busybox/sh
       /kaniko/executor -v debug -f `pwd`/${directory}/${app}/Dockerfile -c `pwd`/${directory}/${app} |
